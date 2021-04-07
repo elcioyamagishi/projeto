@@ -9,29 +9,33 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 //import org.springframework.web.bind.annotation.RequestBody;
-//import java.util.List;
+import java.util.List;
 
-import com.coffee.code.model.itmnEquipamento;
-import com.coffee.code.repo.itmnEquipamentoRepo;
+import com.coffee.code.model.itmnEvento;
+import com.coffee.code.repo.itmnEventoRepo;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/equipamento")
+@RequestMapping("/evento")
 
-public class itmnEquipamentoController {
+public class itmnEventoController {
 
     @Autowired // injeção de dependecia 
-    private itmnEquipamentoRepo repo;
+    private itmnEventoRepo repo;
 
-    @GetMapping("idEquip/{idEquip}")
-    public ResponseEntity<itmnEquipamento> getEquip(@PathVariable int idEquip) {
-        itmnEquipamento equipEncontrado = repo.findByIdEquip(idEquip);
-        if(equipEncontrado != null) {
-            return ResponseEntity.ok(equipEncontrado);
+    @GetMapping("numSeq/{numSeq}")
+    public ResponseEntity<itmnEvento> getEvento(@PathVariable int numSeq) {
+        itmnEvento eventoEncontrado = repo.findByNumSeq(numSeq);
+        if(eventoEncontrado != null) {
+            return ResponseEntity.ok(eventoEncontrado);
         }
         return ResponseEntity.notFound().build();
     }
 
+    @GetMapping("/all")
+    public List<itmnEvento> getAllEItmnEventos() {
+        List<itmnEvento> lista = (List<itmnEvento>) repo.findAll();
+        return lista;
+    }
 
-    
 }
