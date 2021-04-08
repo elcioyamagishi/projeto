@@ -103,7 +103,12 @@
   /* Criando estilos que serão utilizados na nossa página em Bootstrap*/
   .container{
       
-      border: 3px solid red;
+      border: 1px solid rgb(148, 146, 146);
+      width: 100%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 12px;
+      color: aliceblue;
+      font-weight: bold;
 
 
   }
