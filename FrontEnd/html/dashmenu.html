@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relatório de Eventos!</title>
+  <title>Menu principal</title>
 </head>
 
 <!-- Chamando a biblioteca de CSS do Bootstrap-->
@@ -25,6 +25,7 @@
 
 <!--Chamada da nossa biblioteca interna em CSS-->
 <link rel="stylesheet" href="../css/estilos.css">
+<script src="/js/menu.js"></script>
 
 
 
@@ -49,7 +50,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-              <a class="dropdown-item" href="../html/selecaorelatorios.html">Hub de relatórios</a>
+              <a class="dropdown-item" href="../html/dashmenu.html">Hub de relatórios</a>
               <a class="dropdown-item" href="../html/relatorioalerta.html">Alertas</a>
               <a class="dropdown-item" href="../html/relatorioevento.html">Eventos</a>
               <div class="dropdown-divider"></div>
@@ -68,9 +69,11 @@
 
 
         </ul>
-        <a class="btn btn-primary" href="../html/login.html" role="button">Logout</a>
+        <!--<a class="btn btn-primary" href="../html/login.html" role="button">Logout</a>-->
+
         </form>
       </div>
+      <button onclick="logout()">Logout</button>
     </nav>
   </body>
   <br>
@@ -78,8 +81,18 @@
   <body>
     <!--Criando um formulario de consulta-->
     <!-- Tag de criação de formulário <form>-->
-    <form id="formulario_relatorios" method="POST" align="center"></form>
-      <!-- Criando uma área de desenvovimento para os campos do formulário-->
+
+    
+    <body onload="validaLogin()">
+      <div id="menu">
+      <div id="user"></div>
+      <div id="foto"></div>
+      <div id="racf"></div>
+      <br>
+    </div>
+
+      <!-- Criando uma área de desenvovimento para os campos do formulário-
+        <form id="formulario_relatorios" method="POST" align="center"></form>
       <div class="card-group">
         <div class="card">
           <a href="../html/relatorioevento.html"></a>
@@ -101,14 +114,14 @@
             <h5 class="card-title">Relatório de Alertas</h5>
             <p class="card-text">Exiba em tela ou extraia o relatório de Alertas no período que desejar.</p>
 
-          </div>
-        </div>
+          </div> -->
       </div>
       </div>
+      </div>
+    </body>
+
+
+
+    </form>
+
   </body>
-
-
-
-  </form>
-
-</body>
