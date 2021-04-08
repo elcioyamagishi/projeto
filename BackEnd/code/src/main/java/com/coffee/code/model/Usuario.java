@@ -1,4 +1,4 @@
-package br.professor.projeto.model;
+package com.coffee.code.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
