@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório de Eventos!</title>
+
+    <!-- Script dos relatórios -->
+    <script src="/js/report.js"></script>
 </head>
 
 <!-- Chamando a biblioteca de CSS do Bootstrap-->
@@ -28,7 +31,6 @@
 
 <!--Chamada da nossa biblioteca interna em CSS-->
 <link rel="stylesheet" href="../css/estilos.css">
-
 
 
 <body>
@@ -84,7 +86,9 @@
         <!--Criando um formulario de consulta-->
         <!-- Tag de criação de formulário <form>-->
             <div class="container">
-        <form id="formulario_login" method="POST" align="center">
+        <!-- <form id="formulario_login" method="POST" align="center"> --> 
+        <!-- alterado sem o method -->
+        <form id="formulario_login" align="center">
             <!-- Criando uma área de desenvovimento para os campos do formulário-->
             <fieldset>
                 <!-- Criando uma legenda no nosso formulário-->
@@ -99,7 +103,7 @@
                 </td>
                 <br>
 
-                <td>Inicio</td>: <input type="date" name="data_relatorio" required>
+                <td>Inicio</td>: <input type="date" name="data_relatorio" required id="dataInicio">
                 <td>Fim: </td>
                 <input type="date" name="data_relatorio" required><br><br>
 
@@ -110,10 +114,16 @@
                 <input type="submit" value="Extrair" class="botao">
             </fieldset>
             </div>
+        </form>
+
+        <div>
+            <input type="date" id="dataInicio">
+            <button onclick="gerarRelatorio()">Gerar</button>
+            <br>
+            <div id="tabela"></div>
+        </div>
+
     </body>
 
-
-
-    </form>
-
 </body>
+</html>
