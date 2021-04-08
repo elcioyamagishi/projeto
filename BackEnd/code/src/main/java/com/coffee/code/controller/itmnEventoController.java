@@ -33,7 +33,7 @@ public class itmnEventoController {
     }
 
     @GetMapping("/all")
-    public List<itmnEvento> getAllEItmnEventos() {
+    public List<itmnEvento> getAllitmnEventos() {
         List<itmnEvento> lista = (List<itmnEvento>) repo.findAll();
         return lista;
     }
