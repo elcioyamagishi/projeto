@@ -11,7 +11,7 @@ function tratarResposta(resposta) {
 }
 
 function exibirDados(alarmeList) {
-    let tabela = '<table> <tr> <th>Id</th> <th>Nome</th> <th>Descricao</th>'
+    let tabela = '<table class="table table-bordered"s> <tr> <th>Id</th> <th>Nome</th> <th>Descricao</th>'
 
     for (i=0; i < alarmeList.length; i++) {
         tabela += `<tr> <td>${alarmeList[i].id}</td> <td>${alarmeList[i].nome}</td> <td>${alarmeList[i].descricao}</td> </tr>`

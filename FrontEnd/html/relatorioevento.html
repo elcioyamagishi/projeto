@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório de Eventos!</title>
+    <title>Relatório de Eventos</title>
 
     <!-- Script dos relatórios -->
     <script src="/js/report.js"></script>
@@ -38,64 +38,59 @@
 
 <body>
 
-    <body>
-        <!--Criando um menu 100% BootStrap-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">EventDash</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!--Criando um menu 100% BootStrap-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">EventDash</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
 
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Relatórios
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Relatórios
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                            <a class="dropdown-item" href="../html/dashmenu.html">Hub de relatórios</a>
-                            <a class="dropdown-item" href="../html/relatorioalerta.html">Alertas</a>
-                            <a class="dropdown-item" href="../html/relatorioevento.html">Eventos</a>
-                            <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../html/dashmenu.html">Hub de relatórios</a>
+                        <a class="dropdown-item" href="../html/relatorioalerta.html">Alertas</a>
+                        <a class="dropdown-item" href="../html/relatorioevento.html">Eventos</a>
+                        <div class="dropdown-divider"></div>
 
-                        </div>
-                    </li>
+                    </div>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="../html/index.html">Sobre a Coffee&Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://itau.service-now.com/nav_to.do?uri=$pa_dashboard.do%3Fsysparm_dashboard%3D0d316a9f1bdbd010ce6f0e5eea4bcbb3%26sysparm_tab%3D95d527d11be79450bb55ab853a4bcb09%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dundefined%26sysparm_active_panel%3Dfalse">Dashboard
-                            no IUDigital</a></a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../html/index.html">Sobre a Coffee&Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://itau.service-now.com/nav_to.do?uri=$pa_dashboard.do%3Fsysparm_dashboard%3D0d316a9f1bdbd010ce6f0e5eea4bcbb3%26sysparm_tab%3D95d527d11be79450bb55ab853a4bcb09%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dundefined%26sysparm_active_panel%3Dfalse">Dashboard
+                        no IUDigital</a></a>
+                </li>
+            </ul>
+            </form>
+        </div>
+        <button onclick="logout()">Logout</button>
+    </nav>
 
-
-                </ul>
-              
-
-                </form>
-            </div>
-             <button onclick="logout()">Logout</button>
-        </nav>
-    </body>
     <br>
 
-    <body>
-        <!--Criando um formulario de consulta-->
-        <!-- Tag de criação de formulário <form>-->
-            <div class="container">
-        <!-- <form id="formulario_login" method="POST" align="center"> --> 
-        <!-- alterado sem o method -->
-        <form id="formulario_login" align="center">
-            <!-- Criando uma área de desenvovimento para os campos do formulário-->
-            <fieldset>
-                <!-- Criando uma legenda no nosso formulário-->
 
+    <!--Criando um formulario de consulta-->
+    <!-- Tag de criação de formulário <form>-->
+    <div class="container" align="center">
+        <!-- <form id="formulario_login" method="POST" align="center"> -->
+        <!-- alterado sem o method -->
+
+        <!-- Criando uma área de desenvovimento para os campos do formulário-->
+        <fieldset>
+            <!-- Criando uma legenda no nosso formulário-->
+            <div class="shadow p-3 mb-5 bg-white rounded">
                 <h1>
                     <legend> Relatório de Eventos </legend>
                 </h1>
@@ -106,28 +101,18 @@
                 </td>
                 <br>
 
-                <td>Inicio</td>: <input type="date" name="data_relatorio" required id="dataInicio">
-                <td>Fim: </td>
-                <input type="date" name="data_relatorio" required><br><br>
 
 
+                <td>Inicio: </td><input type="date" id="eventsFrom" name="inicio_evento">
+                <td>Fim:</td><input type="date" id="eventsTo" name="fim_evento">
+                <br>
+                <br>
+                <button onclick="gerarRelatorio()">Gerar</button>
 
-                <!-- Criando um botão de envio de dados-->
-                <input type="submit" value="Gerar em tela" class="botao">
-                <input type="submit" value="Extrair" class="botao">
-            </fieldset>
-            </div>
-        </form>
-
-        <div>
-            <input type="date" id="eventsFrom">
-            <input type="date" id="eventsTo">
-            <button onclick="gerarRelatorio()">Gerar</button>
-            <br>
-            <div id="tabela"></div>
-        </div>
-
-    </body>
-
+        </fieldset>
+        <div id="tabela"></div>
+    </div>
+    </form>
 </body>
+
 </html>
