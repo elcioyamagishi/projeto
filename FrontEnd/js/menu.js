@@ -16,6 +16,7 @@ function logout() {
     window.location = "index.html"
 }
 
+/* 
 function gerarRelatorio() {
     let dataInicio = document.getElementById("dataInicio").value 
     let dataFinal = document.getElementById("dataFinal").value 
@@ -40,4 +41,5 @@ function exibirDados(listaUsers) {
   
     tabela = tabela + '</table>'
     document.getElementById("tabela").innerHTML = tabela
-}
+} 
+*/
