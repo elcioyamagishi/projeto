@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu principal</title>
+  <title>Home</title>
 </head>
 
 <!-- Chamando a biblioteca de CSS do Bootstrap-->
@@ -32,156 +32,71 @@
 <body onload="validaLogin()">
 
   <!-- <body> -->
-    <!--Criando um menu 100% BootStrap-->
-    
-      
-      <div class="row">
-        <div class="col-sm">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">EventDash</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-      
-                <li class="nav-item dropdown active">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Relatórios
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      
-                    <a class="dropdown-item" href="../html/dashmenu.html">Hub de relatórios</a>
-                    <a class="dropdown-item" href="../html/relatorioalerta.html">Alertas</a>
-                    <a class="dropdown-item" href="../html/relatorioevento.html">Eventos</a>
-                    <div class="dropdown-divider"></div>
-      
-                  </div>
-                </li>
-      
-                
-                <li class="nav-item">
-                  <a class="nav-link"
-                    href="https://itau.service-now.com/nav_to.do?uri=$pa_dashboard.do%3Fsysparm_dashboard%3D0d316a9f1bdbd010ce6f0e5eea4bcbb3%26sysparm_tab%3D95d527d11be79450bb55ab853a4bcb09%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dundefined%26sysparm_active_panel%3Dfalse">Dashboard
-                    no IUDigital</a></a>
-                </li>
-      
-      
-              </ul>
-              <!--<a class="btn btn-primary" href="../html/login.html" role="button">Logout</a>-->
-      
-              <!-- </form> -->
-            </div>
-            <button class="btn btn-outline-primary" onclick="logout()">Logout</button>
-          </nav>
+  <!--Criando um menu 100% BootStrap-->
+
+
+  <div class="row">
+    <div class="col-sm">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">EventDash</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Relatórios
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                <a class="dropdown-item" href="../html/dashmenu.html">Home</a>
+                <a class="dropdown-item" href="../html/relatorioalerta.html">Alertas</a>
+                <a class="dropdown-item" href="../html/relatorioevento.html">Eventos</a>
+                <div class="dropdown-divider"></div>
+
+              </div>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link"
+                href="https://itau.service-now.com/nav_to.do?uri=$pa_dashboard.do%3Fsysparm_dashboard%3D0d316a9f1bdbd010ce6f0e5eea4bcbb3%26sysparm_tab%3D95d527d11be79450bb55ab853a4bcb09%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dundefined%26sysparm_active_panel%3Dfalse">Dashboard
+                no IUDigital</a></a>
+            </li>
+
+
+          </ul>
+          <!--<a class="btn btn-primary" href="../html/login.html" role="button">Logout</a>-->
+
+          <!-- </form> -->
         </div>
-        
-      </div>
-      <br><br>
-      <div class="container">
-      <div class="row justify-content-md-center">
-        
-        <div class="inline-block-center inline-block-center flex-center">
+        <button class="btn btn-outline-primary" onclick="logout()">Logout</button>
+      </nav>
+    </div>
+
+  </div>
+  <br><br>
+  <div class="container">
+
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
           <div id="foto"></div>
-          <div class="">
-          <div id="user"></div>
-      <br>
-      <div id="racf"></div>
-    </div>
-      
-          </div>
-          </div>
-    </div>
-    <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">EventDash</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Relatórios
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-              <a class="dropdown-item" href="../html/dashmenu.html">Hub de relatórios</a>
-              <a class="dropdown-item" href="../html/relatorioalerta.html">Alertas</a>
-              <a class="dropdown-item" href="../html/relatorioevento.html">Eventos</a>
-              <div class="dropdown-divider"></div>
-
-            </div>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="../html/index.html">Sobre a Coffee&Code</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-              href="https://itau.service-now.com/nav_to.do?uri=$pa_dashboard.do%3Fsysparm_dashboard%3D0d316a9f1bdbd010ce6f0e5eea4bcbb3%26sysparm_tab%3D95d527d11be79450bb55ab853a4bcb09%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dundefined%26sysparm_active_panel%3Dfalse">Dashboard
-              no IUDigital</a></a>
-          </li>
-
-
-        </ul>
-        <a class="btn btn-primary" href="../html/login.html" role="button">Logout</a>
-
-        </form> 
-      </div>
-      <button onclick="logout()">Logout</button>
-    </nav> 
-   </body> -->
-  <br>
-
-  <!-- <body> -->
-    <!--Criando um formulario de consulta-->
-    <!-- Tag de criação de formulário <form>-->
-
-    
-    <!-- <body onload="validaLogin()"> -->
-      <!-- <div id="menu"> -->
-      
-      
-    <!-- </div> -->
-
-      <!-- Criando uma área de desenvovimento para os campos do formulário-
-        <form id="formulario_relatorios" method="POST" align="center"></form>
-      <div class="card-group">
-        <div class="card">
-          <a href="../html/relatorioevento.html"></a>
-          <img alt="Events" src="../imagens/eventos.PNG" class="card-img-top">
-
+        </div>
+        <div class="col-md-8">
           <div class="card-body">
-            <a href="../html/relatorioevento.html"></a>
-            <h5 class="card-title">Relatório de Eventos</h5>
-
-            <p class="card-text">Exiba em tela ou extraia o relatório de Eventos no período que desejar.</p>
-
+            <div id="user"></div>
+            <br>
+            <div id="racf"></div>
           </div>
         </div>
-        <div class="card">
-          <a href="../html/relatorioalerta.html"></a>
-          <img src="../imagens/alertas.PNG" class="card-img-top" alt="...">
-          <div class="card-body">
-            <a href="../html/relatorioalerta.html"></a>
-            <h5 class="card-title">Relatório de Alertas</h5>
-            <p class="card-text">Exiba em tela ou extraia o relatório de Alertas no período que desejar.</p>
+      </div>
+    </div>
 
-          </div> -->
-     <!--</div>--> 
-      <!--</div>-->
-      <!-- </div> -->
-    <!-- </body> -->
-
-
-
-    <!-- </form> -->
-
-  </body>
+  </div>
+</body>
