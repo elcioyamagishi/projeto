@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório de Alertas!</title>
+    <script src="/js/alarme.js"></script>
 </head>
 
 <!-- Chamando a biblioteca de CSS do Bootstrap-->
@@ -47,21 +48,22 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    
+
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Relatórios
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Relatórios
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            
-                          <a class="dropdown-item" href="../html/dashmenu.html">Hub de relatórios</a>
-                          <a class="dropdown-item" href="../html/relatorioalerta.html">Alertas</a>
-                          <a class="dropdown-item" href="../html/relatorioevento.html">Eventos</a>
-                          <div class="dropdown-divider"></div>
-                          
+
+                            <a class="dropdown-item" href="../html/dashmenu.html">Hub de relatórios</a>
+                            <a class="dropdown-item" href="../html/relatorioalerta.html">Alertas</a>
+                            <a class="dropdown-item" href="../html/relatorioevento.html">Eventos</a>
+                            <div class="dropdown-divider"></div>
+
                         </div>
-                      </li>
-                   
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="../html/index.html">Sobre a Coffee&Code</a>
                     </li>
@@ -73,50 +75,68 @@
 
 
                 </ul>
-               
+
                 </form>
             </div>
-            
+
             <button onclick="logout()">Logout</button>
-           
+
         </nav>
     </body>
     <br>
 
     <body>
-    <!--Criando um formulario de consulta-->
-    <!-- Tag de criação de formulário <form>-->
+        <!--Criando um formulario de consulta-->
+        <!-- Tag de criação de formulário <form>-->
         <div class="container">
-    <form id="formulario_login" method="POST" align="center">
-        <!-- Criando uma área de desenvovimento para os campos do formulário-->
-        <fieldset>
-            <!-- Criando uma legenda no nosso formulário-->
+            <form id="formulario_login" method="POST" align="center">
+                <!-- Criando uma área de desenvovimento para os campos do formulário-->
+                <fieldset>
+                    <!-- Criando uma legenda no nosso formulário-->
 
-            <h1>
-                <legend> Relatório de Alertas </legend>
-            </h1>
-            <br>
+                    <h1>
+                        <legend> Relatório de Alertas </legend>
+                    </h1>
+                    <br>
 
-            <td>
-                <label>Informe o período do relatório:</label>
-            </td>
-            <br>
+                    <td>
+                        <label>Informe o período do relatório:</label>
+                    </td>
+                    <br>
 
-            <td>Inicio</td>: <input type="date" name="data_relatorio" required> <td>Fim: </td>          
-            <input type="date" name="data_relatorio" required><br><br>         
-         
+                    <td>Inicio</td>: <input type="date" name="data_relatorio" required>
+                    <td>Fim: </td>
+                    <input type="date" name="data_relatorio" required><br><br>
 
 
-            <!-- Criando um botão de envio de dados-->
-            <input type="submit" value="Gerar em tela" class="botao">
-            <input type="submit" value="Extrair" class="botao">
 
-            
+                    <!-- Criando um botão de envio de dados-->
+                    <input type="submit" value="Gerar em tela" class="botao">
+                    <input type="submit" value="Extrair" class="botao">
 
-            
-        </fieldset>
+
+
+
+                </fieldset>
+            </form>            
         </div>
+
+
+        <div>
+            <button onclick="gerarRelatorio()">Gerar</button>
+            <br>
+            <div id="tabela"></div>
+        </div>
+
+
+
     </body>
+
+
+
+
+
+
 
 </body>
 

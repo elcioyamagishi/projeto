@@ -42,7 +42,7 @@ public class EventoController {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         LocalDate from = LocalDate.parse(data.getFrom(), fmt);
-        LocalDate to = LocalDate.parse(data.getFrom(), fmt);
+        LocalDate to = LocalDate.parse(data.getTo(), fmt);
 
         List<Evento> listaEventos = (List<Evento>) repo.findAllByDataEventoBetweenOrderByDataEvento(from, to);
 
