@@ -1,23 +1,21 @@
 package com.coffee.code.model;
 
-import java.util.Date;
-
 public class BetweenDate {
-    private Date from, to;
+    private String from, to;
 
-    public Date getFrom() {
+    public String getFrom() {
         return from;
     }
 
-    public Date getTo() {
+    public String getTo() {
         return to;
     }
 
-    public void setTo(Date to) {
+    public void setTo(String to) {
         this.to = to;
     }
 
-    public void setFrom(Date from) {
+    public void setFrom(String from) {
         this.from = from;
     }
 }

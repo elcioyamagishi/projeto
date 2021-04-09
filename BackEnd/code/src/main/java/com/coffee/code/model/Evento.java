@@ -1,6 +1,6 @@
 package com.coffee.code.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity // classe mapeada no banco de dados
@@ -23,16 +23,16 @@ public class Evento {
         itmn_evento -> itmn_alarme
                     -> itmn_equipamento
     referência: https://www.baeldung.com/spring-data-rest-relationships */
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_alarme")
     private Alarme alarmeId;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_equip")
-    private itmnEquipamento equipamentoId;
+    private Equipamento equipamentoId;
 
     @Column(name = "data_evt")
-    private Date dataEvento;
+    private LocalDate dataEvento;
 
     public int getId() {
         return id;
@@ -42,11 +42,11 @@ public class Evento {
         return alarmeId;
     }
 
-    public itmnEquipamento getId_equipamento() {
+    public Equipamento getId_equipamento() {
         return equipamentoId;
     }
 
-    public Date getDataEvento() {
+    public LocalDate getDataEvento() {
         return dataEvento;
     }
 }

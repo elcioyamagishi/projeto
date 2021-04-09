@@ -1,5 +1,7 @@
 package com.coffee.code.controller;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import com.coffee.code.model.BetweenDate;
@@ -35,10 +37,14 @@ public class EventoController {
     }
 
     @PostMapping("/between")
-    // como faria para retornar um ResponseEntity com a List<Evento> ?
     // referência: https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
     public List<Evento> between(@RequestBody BetweenDate data) {
-        List<Evento> listaEventos = (List<Evento>) repo.findAllByDataEventoBetween(data.getFrom(), data.getTo());
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        LocalDate from = LocalDate.parse(data.getFrom(), fmt);
+        LocalDate to = LocalDate.parse(data.getFrom(), fmt);
+
+        List<Evento> listaEventos = (List<Evento>) repo.findAllByDataEventoBetweenOrderByDataEvento(from, to);
 
         return listaEventos;
     }
