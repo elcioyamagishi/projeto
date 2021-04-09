@@ -27,7 +27,7 @@ function tratarResposta(resposta) {
 }
 
 function exibirDados(eventsList) {
-    let tabela = '<table> <tr> <th>Data</th> <th>Alarme</th> <th>Equipamento</th>'
+    let tabela = '<table class="table table-bordered" > <tr> <th>Data</th> <th>Alarme</th> <th>Equipamento</th>'
 
     for (i=0; i < eventsList.length; i++) {
         tabela += `<tr> <td>${eventsList[i].dataEvento}</td> <td>${eventsList[i].id_alarme.nome}</td> <td>${eventsList[i].id_equipamento.hostname}</td> </tr>`

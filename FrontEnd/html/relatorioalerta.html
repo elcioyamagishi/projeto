@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório de Alertas!</title>
+    <title>Relatório de Alertas</title>
     <script src="/js/alarme.js"></script>
 </head>
 
@@ -32,6 +32,8 @@
 
 <!--chamada do JS-->
 <script src="/js/menu.js"></script>
+
+
 
 
 
@@ -88,12 +90,12 @@
     <body>
         <!--Criando um formulario de consulta-->
         <!-- Tag de criação de formulário <form>-->
-        <div class="container">
-            <form id="formulario_login" method="POST" align="center">
+        <div class="container" align="center" >
+            
                 <!-- Criando uma área de desenvovimento para os campos do formulário-->
                 <fieldset>
                     <!-- Criando uma legenda no nosso formulário-->
-
+                    <div class="shadow p-3 mb-5 bg-white rounded">
                     <h1>
                         <legend> Relatório de Alertas </legend>
                     </h1>
@@ -103,29 +105,27 @@
                         <label>Informe o período do relatório:</label>
                     </td>
                     <br>
-
-                    <td>Inicio</td>: <input type="date" name="data_relatorio" required>
-                    <td>Fim: </td>
-                    <input type="date" name="data_relatorio" required><br><br>
-
-
-
                     <!-- Criando um botão de envio de dados-->
-                    <input type="submit" value="Gerar em tela" class="botao">
-                    <input type="submit" value="Extrair" class="botao">
-
-
+                    
+                    
+                        <span class="border-5">
+                            
+                            <button onclick="gerarRelatorio()">Gerar</button>
+                            <br>
+                            
+                        </span>
+            </div>
+            <div id="tabela"></div> 
 
 
                 </fieldset>
-            </form>            
+                   
+               
         </div>
 
 
         <div>
-            <button onclick="gerarRelatorio()">Gerar</button>
-            <br>
-            <div id="tabela"></div>
+            
         </div>
 
 
