@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity // essa anotacao indica que a classe é mapeadano banco de dados
 @Table(name = "itmn_equipamento") // indica a tabela do banco de dados
 
-public class itmnEquipamento {
+public class Equipamento {
     @Id // indica chave primaria, independente do nome da variavel
     @GeneratedValue(strategy = GenerationType.IDENTITY) // indica que o campo é gerado pelo mysql 
     @Column(name = "id_equip")
