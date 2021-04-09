@@ -28,9 +28,10 @@ function tratarResposta(resposta) {
 
 function exibirDados(eventsList) {
     let tabela = '<table class="table table-bordered" > <tr> <th>Data</th> <th>Alarme</th> <th>Equipamento</th>'
-
+    let databr
     for (i=0; i < eventsList.length; i++) {
-        tabela += `<tr> <td>${eventsList[i].dataEvento}</td> <td>${eventsList[i].id_alarme.nome}</td> <td>${eventsList[i].id_equipamento.hostname}</td> </tr>`
+        databr = new Date(eventsList[i].dataEvento).toLocaleDateString("pt-BR", {timeZone:'UTC'});
+        tabela += `<tr> <td>${databr}</td> <td>${eventsList[i].id_alarme.nome}</td> <td>${eventsList[i].id_equipamento.hostname}</td> </tr>`
         // tabela += `<tr> <td>${event.dataEvento}</td> <td>${event.id_alarme.nome}</td> <td>${event.id_equipamento.hostname}</td> </tr>`
     }
 
