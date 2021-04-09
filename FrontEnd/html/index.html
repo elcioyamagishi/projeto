@@ -3,74 +3,106 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quem somos?</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventDash - Faça seu login!</title>
 </head>
 
 <!-- Chamando a biblioteca de CSS do Bootstrap-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
 
 <!--Chamada da biblioteca de JS do BootStrap-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+  integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
 <!--Chamada da nossa biblioteca interna em CSS-->
 <link rel="stylesheet" href="../css/estilos.css">
 
+<!--chamada do JS-->
+<script src="/js/login.js"></script>
+
+
+
 
 
 <body>
+  <!--Criando um menu 100% BootStrap-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">EventDash</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    
-        <!--Criando um menu 100% BootStrap-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">EventDash</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="../html/login.html">Login <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="../html/index.html">Sobre a Coffee&Code</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://itau.service-now.com/nav_to.do?uri=$pa_dashboard.do%3Fsysparm_dashboard%3D0d316a9f1bdbd010ce6f0e5eea4bcbb3%26sysparm_tab%3D95d527d11be79450bb55ab853a4bcb09%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dundefined%26sysparm_active_panel%3Dfalse">Dashboard no IUDigital</a></a>
-                  </li>                              
-                
-               
-              </ul>
-              
-            </div>
-          </nav>
-        </body>
-    <br>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../html/sobrenos.html">Sobre a Coffee&Code</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+            href="https://itau.service-now.com/nav_to.do?uri=$pa_dashboard.do%3Fsysparm_dashboard%3D0d316a9f1bdbd010ce6f0e5eea4bcbb3%26sysparm_tab%3D95d527d11be79450bb55ab853a4bcb09%26sysparm_cancelable%3Dtrue%26sysparm_editable%3Dundefined%26sysparm_active_panel%3Dfalse">Dashboard
+            no IUDigital</a></a>
+        </li>
 
-    <!--Criando um formulario de consulta-->
-    <!-- Tag de criação de formulário <form>-->
+
+      </ul>
+
+    </div>
+  </nav>
+</body>
+<br>
+
+<body>
+  <!--Criando um formulario de consulta-->
+  <!-- Tag de criação de formulário <form>-->
+
+  
     <form id="formulario_login" method="POST" align="center">
-        <!-- Criando uma área de desenvovimento para os campos do formulário-->
-        <fieldset>
-            <!-- Criando uma legenda no nosso formulário-->
+      <!-- Criando uma área de desenvovimento para os campos do formulário-->
 
-            <h1>
-                <legend> Sobre nós: </legend>
-            </h1>
-            <br>
+      <fieldset>
+        <br>
 
-            <img src="../imagens/logocac.png" align="center" width="100%" height="100%">
-            <br>
-            <br>           
+        <!-- Criando uma legenda no nosso formulário-->
 
-          
+        <img src="../imagens/logoevent.png" width="15%" height="15%">
+        <br>
+        <br>
 
-    </form>
+
+        <body>
+          <div class="container d-flex h-100"> <!-- Para centralizar na vertical -->
+              <div class="row align-items-center w-100"> <!-- Para centralizar na horizontal -->
+                  <div class="col-8 mx-auto"> <!-- Usar coluna com 8 das 12 disponíveis, com margem automática -->
+                      <div class="jumbotron">
+                          <div class="row">
+                              <div class="col">
+                                  <div class="text-center" id="msgError"></div>
+                              </div>
+                          </div>
+                          <form>
+                              <input type="text" class="form-control" placeholder="e-mail / racf" id="txtUser">
+                              <input type="password" class="form-control" placeholder="senha" id="txtSenha">
+                              <div class="col text-center">
+                                  <button class="btn btn-outline-primary" onclick="autenticar(event)">Login</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+  </div>
+  </div>
+  </form>
+</body>
 </body>
