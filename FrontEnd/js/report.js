@@ -3,8 +3,8 @@ function gerarRelatorio() {
     let dateTo = document.getElementById("eventsTo").value
 
     let dateRange = {
-        from: '2020-02-23',
-        to: '2020-02-24'
+        from: dateFrom,
+        to: dateTo
     }
 
     let msg = {
