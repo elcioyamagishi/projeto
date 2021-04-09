@@ -111,28 +111,47 @@
   #user{
    
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
-    color:rgb(5, 5, 5)
+    color:rgb(5, 5, 5);
+    margin-right: auto;
+    margin-left: auto;
+   
+    
+    
+
+}
+
+#racf{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color:rgb(5, 5, 5);
+    
+    
+    
 
 }
 
 
 
-#foto{
-    margin-left: 230px;
-    width: 350px;
-    height: 350px;
+#fotoUser{
+    width: 120px;
+    height: 120px;
+    
+    
+    
 
 }
 
 #menu{
    
-    margin-left: 400px;
+    align-items: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     font-weight: bold;
     color:rgb(5, 5, 5)
+    
 
 }
 
@@ -162,3 +181,19 @@
   .div4{
       background-color: rgb(106, 106, 231);
   }
+
+  .inline-block-center{
+      text-align: center;
+  }
+
+  .inline-block-center div {
+      display: inline-block;
+      text-align: left;
+  }
+
+  .flex-center {
+      display: flex;
+      justify-content: center;
+  }
+
+
